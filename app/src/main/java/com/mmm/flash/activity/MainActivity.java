@@ -23,6 +23,7 @@ import com.mmm.flash.R;
 import com.mmm.flash.adapter.NewsFragmentPagerAdapter;
 import com.mmm.flash.bean.NewsClassify;
 import com.mmm.flash.fragment.NewsFragment;
+import com.mmm.flash.network.Helper;
 import com.mmm.flash.tool.BaseTools;
 import com.mmm.flash.tool.Constants;
 import com.mmm.flash.view.ColumnHorizontalScrollView;
@@ -73,6 +74,8 @@ public class MainActivity extends FragmentActivity {
 		setContentView(R.layout.main);
 		mScreenWidth = BaseTools.getWindowsWidth(this);
 		mItemWidth = mScreenWidth / 7;// 一个Item宽度为屏幕的1/7
+
+
 		initView();
 		initSlidingMenu();
 	}
@@ -123,6 +126,8 @@ public class MainActivity extends FragmentActivity {
 			}
 		});
 		setChangelView();
+
+
 	}
 	/**
 	 *  当栏目项发生变化时候调用

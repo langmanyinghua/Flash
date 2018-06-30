@@ -8,19 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Constants {
+	public static ArrayList<NewsEntity> newsList = new ArrayList<>();
+
 	public static ArrayList<NewsClassify> getData() {
 		ArrayList<NewsClassify> newsClassify = new ArrayList<NewsClassify>();
 		NewsClassify classify = new NewsClassify();
 		classify.setId(0);
 		classify.setTitle("推荐");
+		classify.setName("news_entertainment");
 		newsClassify.add(classify);
 		classify = new NewsClassify();
 		classify.setId(1);
 		classify.setTitle("热点");
+		classify.setName("hotspot");
 		newsClassify.add(classify);
 		classify = new NewsClassify();
 		classify.setId(2);
 		classify.setTitle("数码");
+		classify.setName("Digital");
 		newsClassify.add(classify);
 		classify = new NewsClassify();
 		classify.setId(3);

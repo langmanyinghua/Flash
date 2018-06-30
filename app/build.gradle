@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    useLibrary 'org.apache.http.legacy'
     compileSdkVersion 27
     buildToolsVersion "27.0.3"
 
@@ -27,4 +28,6 @@ dependencies {
     compile project(':library_SlidingMenu')
     compile files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
     compile project(path: ':library_SlidingMenu')
+
+    compile 'com.loopj.android:android-async-http:1.4.9'
 }
