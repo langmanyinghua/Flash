@@ -77,8 +77,8 @@
     <dimen name="ss_share_diglog_margin_x">8.0dip</dimen>
     <dimen name="ss_share_dialog_pos_y">28.0dip</dimen>
     <dimen name="head_size">28.0dip</dimen>
-    <dimen name="item_image_width">86.0dip</dimen>
-    <dimen name="item_image_height">60.0dip</dimen>
+    <dimen name="item_image_width">105.0dip</dimen>
+    <dimen name="item_image_height">70.0dip</dimen>
     <dimen name="item_image_total_padding">60.0dip</dimen>
     <dimen name="item_image_max_width">180.0dip</dimen>
     <dimen name="right_image_width">86.0dip</dimen>

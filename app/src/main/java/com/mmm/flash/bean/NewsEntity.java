@@ -98,6 +98,8 @@ public class NewsEntity implements Serializable {
      */
     private Boolean interestedStatus = true;
 
+    private String url;
+
     public Integer getNewsCategoryId() {
         return newsCategoryId;
     }
@@ -282,4 +284,12 @@ public class NewsEntity implements Serializable {
         this.isLarge = isLarge;
     }
 
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

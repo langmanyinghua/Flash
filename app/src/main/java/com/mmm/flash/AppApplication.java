@@ -23,7 +23,7 @@ public class AppApplication extends Application {
         super.onCreate();
         application = this;
         initImageLoader(getApplicationContext());
-        Helper.news();
+//        Helper.news();
     }
 
     @Override

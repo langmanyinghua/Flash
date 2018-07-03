@@ -258,7 +258,7 @@
     <style name="item_image_gap">
         <item name="android:layout_width">15.0dip</item>
         <item name="android:layout_height">1.0dip</item>
-        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_weight">0.8</item>
     </style>
 
     <style name="item_comment_content">

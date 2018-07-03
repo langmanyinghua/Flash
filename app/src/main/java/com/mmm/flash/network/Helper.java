@@ -225,59 +225,55 @@ public class Helper {
         });
     }
 
-    public static void news() {
-        HttpUtil.get("http://is.snssdk.com/api/news/feed/v46/?category=news_entertainment&count=100", new JsonHttpResponseHandler() {
+    public static void news(String kw, final HttpCallBack httpCallBack){
+        news(2,kw,httpCallBack);
+    }
+
+    public static void news(int page, String kw, final HttpCallBack httpCallBack) {
+        String apikey = "eDcffFw9AFkosMsNtGIXMyQUuAS5ZKbxt0QW0oriugdakrErCm07w0q55nuXua4H";
+        String url = "http://api01.bitspaceman.com:8000/news/qihoo";
+        RequestParams params = new RequestParams();
+        params.put("apikey", apikey);
+        params.put("pageToken", page);
+        params.put("kw", kw);
+        params.put("site", "qq.com");
+        HttpUtil.get(url, params, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
                 try {
                     Log.i("response", response.toString() + " ");
-                    if ("success".equals(response.getString("message"))) {
+                    if ("000000".equals(response.getString("retcode"))) {
                         JSONArray jsonArray = response.getJSONArray("data");
+
+                        ArrayList<NewsEntity> list = new ArrayList<NewsEntity>();
 
                         Constants.newsList.clear();
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject jsonObject = jsonArray.getJSONObject(i);
-                            String json = jsonObject.getString("content");
-                            Log.i("json", json);
-
-                            JSONObject jsonObjectContent = new JSONObject(json);
-                            if (!jsonObjectContent.has("title")) continue;
 
                             NewsEntity newsEntity = new NewsEntity();
                             newsEntity.setId(i);
                             newsEntity.setNewsId(i);
-                            newsEntity.setTitle(jsonObjectContent.getString("title"));
-                            if (jsonObjectContent.has("comment_count")) {
-                                newsEntity.setCommentNum(jsonObjectContent.getInt("comment_count"));
-                            }
-                            if (jsonObjectContent.has("source")) {
-                                newsEntity.setSource(jsonObjectContent.getString("source"));
-                            }
+                            newsEntity.setUrl(jsonObject.getString("url"));
+                            newsEntity.setTitle(jsonObject.getString("title"));
+                            newsEntity.setCommentNum(jsonObject.optInt("commentCount"));
+                            newsEntity.setSource(jsonObject.optString("posterScreenName"));
 
-                            if (jsonObjectContent.has("image_list")) {
+                            if (jsonObject.has("imageUrls")) {
                                 List<String> urls = new ArrayList<String>();
-                                JSONArray image_list = jsonObjectContent.getJSONArray("image_list");
-                                for (int k = 0; k < image_list.length(); k++) {
-                                    JSONObject imagejson = image_list.getJSONObject(k);
-                                    urls.add(imagejson.getString("url"));
+                                JSONArray imageUrls = jsonObject.optJSONArray("imageUrls");
+                                if (imageUrls != null && imageUrls.length() > 0) {
+                                    for (int k = 0; k < imageUrls.length(); k++) {
+                                        urls.add(imageUrls.getString(k));
+                                    }
                                 }
+
                                 newsEntity.setPicList(urls);
+                                list.add(newsEntity);
                             }
 
-                            newsEntity.setNewsCategoryId(1);
-                            Constants.newsList.add(newsEntity);
-
-                            if (json.length() > 3000) {
-                                for (int j = 0; j < json.length(); j += 3000) {
-                                    if (j + 3000 < json.length())
-                                        Log.i("rescounter" + j, json.substring(j, j + 3000));
-                                    else
-                                        Log.i("rescounter" + j, json.substring(j, json.length()));
-                                }
-                            } else {
-                                Log.i("resinfo", json);
-                            }
+                            httpCallBack.callback(list);
                         }
                     }
                 } catch (Exception e) {
