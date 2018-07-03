@@ -1,5 +1,6 @@
 package com.mmm.flash.util;
 
+import com.mmm.flash.bean.CommentBean;
 import com.mmm.flash.bean.GameOption;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class Constant {
     public static final String IS_FIST = "isFirst";
     public static List<String> PM = new ArrayList<>();
     public static final String APPSRC = "5b1925e9dc5c793aaa383250";
+    public static List<CommentBean> commentBeanList ;
 
     // TODO: 2018/6/10 修改类型 
     public static final APPType apptype = APPType.comic;

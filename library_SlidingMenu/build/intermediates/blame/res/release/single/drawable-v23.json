@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/res/merged/release/drawable-v23/abc_control_background_material.xml",
-        "source": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable-v23/abc_control_background_material.xml"
+        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\release\\drawable-v23\\abc_control_background_material.xml",
+        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\release\\drawable-v23\\abc_control_background_material.xml",
+        "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]

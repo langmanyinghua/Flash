@@ -14,35 +14,61 @@ public class Constants {
 		ArrayList<NewsClassify> newsClassify = new ArrayList<NewsClassify>();
 		NewsClassify classify = new NewsClassify();
 		classify.setId(0);
-		classify.setTitle("推荐");
+		classify.setTitle("热门");
+		classify.setName("news_hot.json");
 		newsClassify.add(classify);
+
 		classify = new NewsClassify();
 		classify.setId(1);
-		classify.setTitle("热点");
+		classify.setTitle("世界杯");
+		classify.setName("worldcup.json");
 		newsClassify.add(classify);
+
 		classify = new NewsClassify();
 		classify.setId(2);
-		classify.setTitle("数码");
-		newsClassify.add(classify);
-		classify = new NewsClassify();
-		classify.setId(3);
-		classify.setTitle("视频");
-		newsClassify.add(classify);
-		classify = new NewsClassify();
-		classify.setId(4);
-		classify.setTitle("体育");
-		newsClassify.add(classify);
-		classify = new NewsClassify();
-		classify.setId(5);
 		classify.setTitle("娱乐");
 		newsClassify.add(classify);
+		classify.setName("news_entertainment.json");
+
 		classify = new NewsClassify();
-		classify.setId(6);
-		classify.setTitle("科技");
+		classify.setId(3);
+		classify.setTitle("金融");
+		classify.setName("news_finance.json");
 		newsClassify.add(classify);
 		classify = new NewsClassify();
+
+		classify.setId(4);
+		classify.setTitle("军事");
+		newsClassify.add(classify);
+		classify.setName("news_military.json");
+
+		classify = new NewsClassify();
+		classify.setId(5);
+		classify.setTitle("体育");
+		classify.setName("news_sports.json");
+		newsClassify.add(classify);
+
+		classify = new NewsClassify();
+		classify.setId(6);
+		classify.setTitle("世界");
+		newsClassify.add(classify);
+		classify.setName("news_world.json");
+		classify = new NewsClassify();
+
 		classify.setId(7);
+		classify.setTitle("科技");
+		newsClassify.add(classify);
+		classify.setName("news_tech.json");
+		classify = new NewsClassify();
+
+		classify.setId(8);
 		classify.setTitle("汽车");
+		classify.setName("news_car.json");
+		classify = new NewsClassify();
+
+		classify.setId(9);
+		classify.setTitle("社会");
+		classify.setName("news_society.json");
 		newsClassify.add(classify);
 		return newsClassify;
 	}
@@ -113,4 +139,7 @@ public class Constants {
 	public final static int mark_exclusive = 3;
 	/** mark=4 ：收藏 */
 	public final static int mark_favor = 4;
+
+
+
 }

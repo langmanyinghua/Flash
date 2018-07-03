@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/res/merged/androidTest/debug/values-ldltr-v21/values-ldltr-v21.xml",
+        "outputFile": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-ldltr-v21\\values-ldltr-v21.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "file": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 112,
+                        "endOffset": 163
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-ldltr-v21\\values-ldltr-v21.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 112,
+                    "endOffset": 163
+                },
+                "from": {
+                    "file": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/panlaixing/Documents/workspace/Flash/library_SlidingMenu/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }
 ]

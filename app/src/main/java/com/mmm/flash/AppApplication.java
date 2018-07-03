@@ -12,7 +12,14 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.io.Writer;
 
 public class AppApplication extends Application {
     public static AppApplication application;
@@ -24,6 +31,7 @@ public class AppApplication extends Application {
         application = this;
         initImageLoader(getApplicationContext());
 //        Helper.news();
+
     }
 
     @Override

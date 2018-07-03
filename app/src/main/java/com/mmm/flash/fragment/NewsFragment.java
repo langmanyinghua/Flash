@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.mmm.flash.R;
 import com.mmm.flash.activity.WebActivity;
 import com.mmm.flash.adapter.NewsAdapter;
@@ -23,6 +24,8 @@ import com.mmm.flash.bean.NewsEntity;
 import com.mmm.flash.network.Helper;
 import com.mmm.flash.network.HttpCallBack;
 import com.mmm.flash.tool.Constants;
+import com.mmm.flash.util.CommUtil;
+import com.mmm.flash.util.Constant;
 
 import java.util.ArrayList;
 
@@ -32,6 +35,7 @@ public class NewsFragment extends Fragment {
     ListView mListView;
     NewsAdapter mAdapter;
     String text;
+    String name;
     ImageView detail_loading;
     public final static int SET_NEWSLIST = 0;
 
@@ -45,6 +49,7 @@ public class NewsFragment extends Fragment {
         // TODO Auto-generated method stub
         Bundle args = getArguments();
         text = args != null ? args.getString("text") : "";
+        name = args != null ? args.getString("name") : "";
         super.onCreate(savedInstanceState);
     }
 
@@ -78,7 +83,6 @@ public class NewsFragment extends Fragment {
         TextView item_textview = (TextView) view.findViewById(R.id.item_textview);
         detail_loading = (ImageView) view.findViewById(R.id.detail_loading);
         item_textview.setText(text);
-
 
         return view;
     }
@@ -117,7 +121,11 @@ public class NewsFragment extends Fragment {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                getActivity().startActivity(new Intent(getActivity(), WebActivity.class).putExtra("url", newsList.get(position).getUrl()));
+                getActivity().startActivity(new Intent(getActivity(), WebActivity.class)
+                        .putExtra("url", newsList.get(position).getUrl())
+                        .putExtra("comment", JSON.toJSONString(newsList.get(position).getCommentList()))
+                );
+
             }
         });
     }
@@ -134,13 +142,17 @@ public class NewsFragment extends Fragment {
 
 
     public void loadData() {
-        Helper.news(text, new HttpCallBack() {
-            @Override
-            public void callback(Object object) {
-                newsList = (ArrayList<NewsEntity>) object;
-                mAdapter.setNewsList(newsList);
-                mAdapter.notifyDataSetChanged();
-            }
-        });
+//        Helper.news(text, new HttpCallBack() {
+//            @Override
+//            public void callback(Object object) {
+//                newsList = (ArrayList<NewsEntity>) object;
+//                mAdapter.setNewsList(newsList);
+//                mAdapter.notifyDataSetChanged();
+//            }
+//        });
+
+        newsList = CommUtil.getNewsData(getContext(), name);
+        mAdapter.setNewsList(newsList);
+        mAdapter.notifyDataSetChanged();
     }
 }

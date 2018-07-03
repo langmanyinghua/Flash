@@ -100,6 +100,8 @@ public class NewsEntity implements Serializable {
 
     private String url;
 
+    private List<CommentBean> commentList;
+
     public Integer getNewsCategoryId() {
         return newsCategoryId;
     }
@@ -291,5 +293,21 @@ public class NewsEntity implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Boolean getLarge() {
+        return isLarge;
+    }
+
+    public void setLarge(Boolean large) {
+        isLarge = large;
+    }
+
+    public List<CommentBean> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<CommentBean> commentList) {
+        this.commentList = commentList;
     }
 }

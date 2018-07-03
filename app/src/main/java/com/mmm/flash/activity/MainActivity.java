@@ -98,7 +98,6 @@ public class MainActivity extends FragmentActivity {
         mScreenWidth = BaseTools.getWindowsWidth(this);
         mItemWidth = mScreenWidth / 7;// 一个Item宽度为屏幕的1/7
 
-
         initView();
         initSlidingMenu();
     }
@@ -251,6 +250,7 @@ public class MainActivity extends FragmentActivity {
         for (int i = 0; i < count; i++) {
             Bundle data = new Bundle();
             data.putString("text", newsClassify.get(i).getTitle());
+            data.putString("name", newsClassify.get(i).getName());
             NewsFragment newfragment = new NewsFragment();
             newfragment.setArguments(data);
             fragments.add(newfragment);

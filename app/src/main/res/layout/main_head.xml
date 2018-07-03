@@ -88,12 +88,15 @@
                 android:paddingRight="6.0dip"
                 android:visibility="gone" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/title_recent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/title" />
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
         </FrameLayout>
 
         <ImageView
@@ -101,6 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:visibility="gone"
             android:layout_toRightOf="@id/title_parent"
             android:padding="3.0dip"
             android:src="@drawable/refreshicon_titlebar" />
@@ -115,7 +119,7 @@
             android:indeterminateOnly="true"
             android:minHeight="13.0dip"
             android:minWidth="13.0dip"
-            android:visibility="invisible" />
+            android:visibility="gone" />
 
         <ProgressBar
             android:id="@+id/top_progress_night"
@@ -127,7 +131,7 @@
             android:indeterminateOnly="true"
             android:minHeight="13.0dip"
             android:minWidth="13.0dip"
-            android:visibility="invisible" />
+            android:visibility="gone" />
     </RelativeLayout>
 
 </RelativeLayout>

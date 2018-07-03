@@ -1,9 +1,23 @@
 package com.mmm.flash.util;
 
+import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 
+import com.mmm.flash.bean.CommentBean;
+import com.mmm.flash.bean.NewsEntity;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by 浪漫樱花 on 2018/6/23.
@@ -24,38 +38,67 @@ public class CommUtil {
         }
     }
 
-    public static String GetWeek(int step) {
-        Calendar c = Calendar.getInstance();
-        Date date = new Date();
-        long day_conver = step * 1000 * 60 * 60 * 24;
-        date.setTime(System.currentTimeMillis() - day_conver);
-        c.setTime(date);
-
-        int weekday = c.get(Calendar.DAY_OF_WEEK) - 1;
-        String result = "";
-        switch (weekday) {
-            case 0:
-                result = "周日";
-                break;
-            case 1:
-                result = "周一";
-                break;
-            case 2:
-                result = "周二";
-                break;
-            case 3:
-                result = "周三";
-                break;
-            case 4:
-                result = "周四";
-                break;
-            case 5:
-                result = "周五";
-                break;
-            case 6:
-                result = "周六";
-                break;
+    public static ArrayList<NewsEntity> getNewsData(Context context, String name) {
+        StringBuilder stringBuilder = new StringBuilder();
+        ArrayList<NewsEntity> list = new ArrayList<>();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.getAssets().open(name)));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return result;
+        if (stringBuilder.length() > 0) {
+            try {
+                JSONArray jsonArray = new JSONArray(stringBuilder.toString());
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    NewsEntity newsEntity = new NewsEntity();
+                    newsEntity.setId(i);
+                    newsEntity.setNewsId(i);
+                    newsEntity.setUrl(jsonObject.optString("url"));
+                    newsEntity.setTitle(jsonObject.optString("title"));
+                    newsEntity.setSource(jsonObject.optString("author"));
+                    newsEntity.setCommentNum(jsonObject.optInt("commentCount"));
+                    newsEntity.setSource(jsonObject.optString("posterScreenName"));
+
+                    if (jsonObject.has("images")) {
+                        List<String> urls = new ArrayList<String>();
+                        JSONArray imageUrls = jsonObject.optJSONArray("images");
+                        if (imageUrls != null && imageUrls.length() > 0) {
+                            for (int k = 0; k < imageUrls.length(); k++) {
+                                urls.add(imageUrls.getString(k));
+                            }
+                        }
+                        newsEntity.setPicList(urls);
+                    }
+
+                    if (jsonObject.has("comments")) {
+                        List<CommentBean> commentBeanList = new ArrayList<>();
+                        JSONArray commentArray = jsonObject.optJSONArray("comments");
+                        if (commentArray != null && commentArray.length() > 0) {
+                            for (int k = 0; k < commentArray.length(); k++) {
+                                JSONObject json = commentArray.getJSONObject(k);
+
+                                CommentBean comment = new CommentBean();
+                                comment.setUid(json.optString("uid"));
+                                comment.setNickname(json.optString("nickname"));
+                                comment.setComment(json.optString("comment"));
+                                comment.setAvatar(json.optString("avatar"));
+                                commentBeanList.add(comment);
+                            }
+                            newsEntity.setCommentList(commentBeanList);
+                        }
+                    }
+                    list.add(newsEntity);
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return list;
     }
 }
