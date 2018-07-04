@@ -1,5 +1,6 @@
 package com.mmm.flash.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -12,6 +13,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
 import com.mmm.flash.R;
@@ -20,7 +22,9 @@ import com.mmm.flash.base.ViewHolder;
 import com.mmm.flash.bean.CommentBean;
 import com.mmm.flash.util.Constant;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by 浪漫樱花 on 2018/6/4.
@@ -35,9 +39,6 @@ public class WebActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
-//        getsupportactionbar().hide();
-//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//竖屏
         setContentView(R.layout.activity_web);
         webView = (WebView) findViewById(R.id.webview);
 
@@ -50,38 +51,30 @@ public class WebActivity extends FragmentActivity {
         settings.setUseWideViewPort(true);
         settings.setLoadWithOverviewMode(true);
         settings.setSupportZoom(false);//设置支持缩放
+        settings.setDomStorageEnabled(true);
+        settings.setBlockNetworkImage(false);
+        settings.setAllowUniversalAccessFromFileURLs(true);
+        settings.setAllowFileAccess(true);
+        settings.setAllowFileAccessFromFileURLs(true);
+        settings.setDefaultTextEncodingName("UTF-8");
+        settings.setBuiltInZoomControls(true); // 设置显示缩放按钮
 
-        webView.setWebViewClient(new WebViewClient() {
-            //覆盖shouldOverrideUrlLoading 方法
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-
-            }
-        });
         webView.loadUrl(url);
 
-
-        comment_list = findViewById(R.id.comment_list);
-        String commentresult = getIntent().getStringExtra("comment");
-        if (!TextUtils.isEmpty(commentresult)) {
-            commentList = JSON.parseArray(commentresult, CommentBean.class);
-            comment_list.setAdapter(commonAdapter = new CommonAdapter<CommentBean>(this, commentList, R.layout.activity_web_item) {
-                @Override
-                public void convert(ViewHolder helper, CommentBean item) {
-                    helper.setText(R.id.nickname, item.getNickname());
-                    helper.setText(R.id.comment, item.getComment());
-                }
-            });
-
-            setListViewHeightBasedOnChildren(comment_list);
-        }
+//        comment_list = findViewById(R.id.comment_list);
+//        String commentresult = getIntent().getStringExtra("comment");
+//        if (!TextUtils.isEmpty(commentresult)) {
+//            commentList = JSON.parseArray(commentresult, CommentBean.class);
+//            comment_list.setAdapter(commonAdapter = new CommonAdapter<CommentBean>(this, commentList, R.layout.activity_web_item) {
+//                @Override
+//                public void convert(ViewHolder helper, CommentBean item) {
+//                    helper.setText(R.id.nickname, item.getNickname());
+//                    helper.setText(R.id.comment, item.getComment());
+//                }
+//            });
+//
+//            setListViewHeightBasedOnChildren(comment_list);
+//        }
     }
 
     public void onClickBack(View view) {

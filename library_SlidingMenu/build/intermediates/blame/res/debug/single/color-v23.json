@@ -1,23 +1,11 @@
 [
     {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
         "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
         "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_edittext.xml"
-    },
-    {
         "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
         "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_spinner.xml"
     },
     {
         "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
@@ -28,36 +16,12 @@
         "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_spinner.xml"
     },
     {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_seek_thumb.xml"
-    },
-    {
         "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
         "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_default.xml"
     },
     {
         "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
         "source": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_edittext.xml"
-    },
-    {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_default.xml"
-    },
-    {
-        "merged": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
-        "source": "F:\\Users\\panlaixing\\Documents\\workspace\\Flash\\library_SlidingMenu\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
         "merged": "F:\\resource\\sunchuo\\Flash\\library_SlidingMenu\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",

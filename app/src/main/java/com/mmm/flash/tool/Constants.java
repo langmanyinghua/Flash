@@ -27,8 +27,8 @@ public class Constants {
 		classify = new NewsClassify();
 		classify.setId(2);
 		classify.setTitle("娱乐");
-		newsClassify.add(classify);
 		classify.setName("news_entertainment.json");
+		newsClassify.add(classify);
 
 		classify = new NewsClassify();
 		classify.setId(3);
@@ -39,8 +39,8 @@ public class Constants {
 
 		classify.setId(4);
 		classify.setTitle("军事");
-		newsClassify.add(classify);
 		classify.setName("news_military.json");
+		newsClassify.add(classify);
 
 		classify = new NewsClassify();
 		classify.setId(5);
@@ -51,21 +51,22 @@ public class Constants {
 		classify = new NewsClassify();
 		classify.setId(6);
 		classify.setTitle("世界");
-		newsClassify.add(classify);
 		classify.setName("news_world.json");
-		classify = new NewsClassify();
+		newsClassify.add(classify);
 
+		classify = new NewsClassify();
 		classify.setId(7);
 		classify.setTitle("科技");
-		newsClassify.add(classify);
 		classify.setName("news_tech.json");
-		classify = new NewsClassify();
+		newsClassify.add(classify);
 
+		classify = new NewsClassify();
 		classify.setId(8);
 		classify.setTitle("汽车");
 		classify.setName("news_car.json");
-		classify = new NewsClassify();
+		newsClassify.add(classify);
 
+		classify = new NewsClassify();
 		classify.setId(9);
 		classify.setTitle("社会");
 		classify.setName("news_society.json");

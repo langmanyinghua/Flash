@@ -32,7 +32,7 @@ import com.mmm.flash.view.DrawerView;
 import java.util.ArrayList;
 
 /**
- * （android高仿系列）今日头条 --新闻阅读器
+ * （android高仿系列）闪电头条 --新闻阅读器
  * author:RA
  * blog : http://blog.csdn.net/vipzjyno1/
  */

@@ -94,6 +94,7 @@ public class NewsFragment extends Fragment {
         initEvent();
         mAdapter = new NewsAdapter(activity, newsList);
         mListView.setAdapter(mAdapter);
+        // loadData();
     }
 
     public void initEvent() {
@@ -123,6 +124,7 @@ public class NewsFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 getActivity().startActivity(new Intent(getActivity(), WebActivity.class)
                         .putExtra("url", newsList.get(position).getUrl())
+                        .putExtra("title", newsList.get(position).getTitle())
                         .putExtra("comment", JSON.toJSONString(newsList.get(position).getCommentList()))
                 );
 
@@ -151,7 +153,9 @@ public class NewsFragment extends Fragment {
 //            }
 //        });
 
-        newsList = CommUtil.getNewsData(getContext(), name);
+        if (newsList.size() == 0) {
+            newsList = CommUtil.getNewsData(getContext(), name);
+        }
         mAdapter.setNewsList(newsList);
         mAdapter.notifyDataSetChanged();
     }

@@ -63,6 +63,7 @@ public class CommUtil {
                     newsEntity.setSource(jsonObject.optString("author"));
                     newsEntity.setCommentNum(jsonObject.optInt("commentCount"));
                     newsEntity.setSource(jsonObject.optString("posterScreenName"));
+                    newsEntity.setContent(jsonObject.optString("content"));
 
                     if (jsonObject.has("images")) {
                         List<String> urls = new ArrayList<String>();

@@ -8,28 +8,9 @@
 
     <include layout="@layout/design_navigation" />
 
-    <ScrollView
+    <WebView
+        android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <WebView
-                android:id="@+id/webview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></WebView>
-
-            <ListView
-                android:id="@+id/comment_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:divider="@null"
-                android:dividerHeight="0dp"></ListView>
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_height="match_parent"></WebView>
 
 </LinearLayout>

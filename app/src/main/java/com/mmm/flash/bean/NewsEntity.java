@@ -102,6 +102,8 @@ public class NewsEntity implements Serializable {
 
     private List<CommentBean> commentList;
 
+    private String content;
+
     public Integer getNewsCategoryId() {
         return newsCategoryId;
     }
@@ -309,5 +311,13 @@ public class NewsEntity implements Serializable {
 
     public void setCommentList(List<CommentBean> commentList) {
         this.commentList = commentList;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

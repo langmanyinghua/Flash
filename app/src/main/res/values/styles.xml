@@ -249,7 +249,6 @@
     </style>
 
     <style name="item_image">
-        <item name="android:background">@drawable/small_image_holder_listpage</item>
         <item name="android:layout_width">@dimen/item_image_width</item>
         <item name="android:layout_height">@dimen/item_image_height</item>
         <item name="android:scaleType">centerCrop</item>
